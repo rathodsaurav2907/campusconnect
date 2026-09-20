@@ -144,7 +144,7 @@ describe('Enrollment Endpoints', () => {
     const course = new Course({
       courseId: `COURSE-${Date.now()}`,
       courseName: 'Test Course',
-      courseCode: 'CS999',
+      courseCode: `CS999-${Date.now()}-${Math.floor(Math.random() * 10000)}`,
       credits: 3,
       department: 'Computer Science',
       capacity: 50,
@@ -175,6 +175,14 @@ describe('Enrollment Endpoints', () => {
   });
 
   test('GET /api/enrollments/:studentId - Get student enrollments', async () => {
+    await request(app)
+      .post('/api/enrollments')
+      .send({
+        studentId: studentId.toString(),
+        courseId: courseId.toString(),
+        semester: 2
+      });
+
     const res = await request(app).get(`/api/enrollments/${studentId}`);
     expect(res.statusCode).toBe(200);
     expect(res.body).toBeInstanceOf(Array);
