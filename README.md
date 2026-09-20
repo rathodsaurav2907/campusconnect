@@ -1,5 +1,10 @@
 # CampusConnect
 
+[![CI/CD](https://github.com/rathodsaurav2907/campusconnect/actions/workflows/ci.yml/badge.svg)](https://github.com/rathodsaurav2907/campusconnect/actions/workflows/ci.yml)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](./docker-compose.yml)
+[![Node.js](https://img.shields.io/badge/Node.js-22_LTS-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-8.0-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+
 A student management, course registry, and academic enrollment platform built with Node.js, Express, and MongoDB.
 
 Part of the **[Microservices & ML Data Platform Portfolio](../README.md)**.
